@@ -34,6 +34,7 @@ public class AllFiles {
                 printWriter.println(i.getFileName()+","+i.getFileType()+","+i.getQuality()+","+i.getDuration());
             }
             printWriter.close();
+            System.out.println("media saved to media.txt");
         } catch (FileNotFoundException e) {
             System.out.println("The file cannot be saved");
             }
@@ -57,6 +58,13 @@ public class AllFiles {
     }
 
     public void statsForMedia(){
-        //*****************
+        float averageDuration = 0;
+        for (Media i: mediaList){
+           averageDuration += i.getDuration();
+        }
+        averageDuration = averageDuration / mediaList.size();
+        System.out.println("the average duration of the media files is "+ averageDuration);
+
+
     }
 }

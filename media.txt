@@ -1,0 +1,2 @@
+ss,ss,ss,10
+ss,ss,good,30

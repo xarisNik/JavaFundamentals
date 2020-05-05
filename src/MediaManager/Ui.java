@@ -7,7 +7,7 @@ public class Ui {
 
     public Choice menu() {
         Choice returnChoice;
-        System.out.println("1.add a media file  2.remove a media file  3.display all media files  4.exit   5.save   6.stats");
+        System.out.println("\n1.add a media file  2.remove a media file  3.display all media files  4.exit   5.save   6.stats");
 
         int choice = 0;
         Scanner scanner = new Scanner(System.in);
@@ -54,6 +54,7 @@ public class Ui {
             switch(choice) {
                 case ADD:
                     Media media = createMedia();
+                    mediaList.addMedia(media);
                     break;
                 case REMOVE:
                     System.out.println("give an index to remove");
