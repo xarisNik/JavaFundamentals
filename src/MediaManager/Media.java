@@ -25,29 +25,29 @@ public class Media {
         return fileName;
     }
 
-    public String getFileType() {
-        return fileType;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public String getQuality() {
-        return quality;
-    }
-
     //setter
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public String getFileType() {
+        return fileType;
     }
 
     public void setFileType(String fileType) {
         this.fileType = fileType;
     }
 
+    public int getDuration() {
+        return duration;
+    }
+
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public String getQuality() {
+        return quality;
     }
 
     public void setQuality(String quality) {

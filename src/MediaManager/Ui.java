@@ -29,9 +29,6 @@ public class Ui {
             default:
                 return Choice.ERROR;
            }
-
-
-
         }
         catch (Exception e) {
             return Choice.ERROR;
@@ -87,8 +84,14 @@ public class Ui {
         String fileType;
         int duration;
         String quality;
+        int type;
+        String album;
+        int fps;
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("1.for audio file   2. for video file");
+        type = scanner.nextInt();
+
         System.out.println("give file name");
         fileName = scanner.next();
         System.out.println("give file type");
@@ -98,9 +101,28 @@ public class Ui {
         System.out.println("give file quality");
         quality = scanner.next();
 
-        Media media = new Media(fileName, fileType, duration, quality);
+        Media media;
+        switch (type){
+            case 1:
+                System.out.println("give me album");
+                album = scanner.next();
+                media = new Audio(fileName, fileType, duration, quality, album);
+                return media;
+            case 2:
+                System.out.println("give me fps");
+                fps = scanner.nextInt();
+                media = new Video(fileName, fileType, duration, quality, fps);
+                return media;
+            default:
+                return null;
 
-        return media;
+        }
+
+
+
+       // Media media = new Media(fileName, fileType, duration, quality);
+
+
     }
 
 
